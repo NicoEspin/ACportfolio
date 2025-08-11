@@ -1,0 +1,146 @@
+[
+  {
+    "id": "chat",
+    "name": "CHAT",
+    "category": "branding",
+    "description": "CHAT fue una conferencia centrada en patologías sociales, sexualidad y gestión de emociones. El desarrollo de marca se basó en un enfoque visual fresco y contemporáneo, utilizando colores saturados, con el verde como tono principal y una textura granulada que aportaba calidez y cercanía. Cada charla estuvo representada por un color característico, reforzando la diversidad temática y facilitando la identificación dentro del sistema gráfico. La identidad fue aplicada a piezas impresas, digitales y señalética, generando una experiencia coherente y memorable.",
+    "slogan": "¿Charlamos?",
+    "images": ["/projects/branding/chat/chat-01.webp", "/projects/branding/chat/chat-02.webp", "/projects/branding/chat/chat-03.webp"]
+  },
+  {
+    "id": "alberdi",
+    "name": "Alberdi",
+    "category": "branding",
+    "description": "Este rebranding pone en valor eso que hace único a Alberdi: su identidad rebelde, su historia viva y una comunidad que nunca pierde la voz. Un barrio con personalidad propia, que no se parece a ningún otro.",
+    "slogan": "La voz de un barrio con historia.",
+    "images": ["/projects/branding/alberdi/alberdi-01.webp", "/projects/branding/alberdi/alberdi-02.webp", "/projects/branding/alberdi/alberdi-03.webp"]
+  },
+  {
+    "id": "vezla",
+    "name": "Vezla",
+    "category": "branding",
+    "description": " Vezla es una marca de zapatillas urbanas que combina estilo, comodidad y personalidad. El desarrollo de su identidad visual se centró en transmitir dinamismo y autenticidad. El logotipo, de diseño personalizado, representa fluidez y actitud juvenil. Se aplicó la marca en distintos soportes, desde indumentaria hasta piezas gráficas, logrando una imagen sólida y coherente.",
+    "slogan": "Identidad para una marca en movimiento",
+    "images": ["/projects/branding/vezla/vezla-01.webp", "/projects/branding/vezla/vezla-02.webp", "/projects/branding/vezla/vezla-03.webp", "/projects/branding/vezla/vezla-04.webp", "/projects/branding/vezla/vezla-05.webp"]
+  },
+  {
+    "id": "salud-mental",
+    "name": "Salud mental",
+    "category": "advertising design",
+    "description": "Este rebranding pone en valor eso que hace único a Alberdi: su identidad rebelde, su historia viva y una comunidad que nunca pierde la voz. Un barrio con personalidad propia, que no se parece a ningún otro.",
+    "slogan": "La voz de un barrio con historia.",
+    "images": ["/projects/publicitario/mental/mental-01.png", "/projects/publicitario/mental/mental-02.webp", "/projects/publicitario/mental/mental-03.webp"]
+  },
+  {
+    "id": "munn",
+    "name": "MUNN",
+    "category": "advertising design",
+    "description": "Diseño de afiche promocional para un evento del reconocido diseñador Jason Munn. El objetivo fue captar la esencia estética de su obra y traducirla en una pieza visual atractiva y coherente con su estilo. Como diseñadora gráfica, trabajé en la composición, selección tipográfica y tratamiento visual para lograr una propuesta clara, moderna y conceptual, alineada con el espíritu del evento.",
+    "slogan": "El arte de sugerir sin mostrar.",
+    "images": ["/projects/publicitario/munn/munn-01.webp", "/projects/publicitario/munn/munn-02.webp", "/projects/publicitario/munn/munn-03.webp"]
+  },
+  {
+    "id": "iclub",
+    "name": "Iclub",
+    "category": "advertising design",
+    "description": "Realicé el diseño gráfico de una publicidad exterior para la luneta trasera de un colectivo. Al tratarse de un soporte en movimiento constante, el desafío fue crear un mensaje visual claro, breve y de alto impacto. La pieza debía comunicar rápidamente la propuesta de iClub, tienda especializada en productos Apple, priorizando la legibilidad y la recordación de marca en pocos segundos.",
+    "slogan": "Iclub en movimiento.",
+    "images": ["/projects/publicitario/iclub/iclub-01.webp", "/projects/publicitario/iclub/iclub-02.webp"]
+  },
+  {
+    "id": "branca",
+    "name": "Branca",
+    "category": "advertising design",
+    "description": "Participé en un concurso donde la propuesta era crear una publicidad para Fernet Branca sin mostrar la marca ni nombrarla directamente. El desafío fue transmitir la identidad y espíritu del fernet de manera sutil y creativa, usando referencias visuales que evocan su esencia. El diseño busca conectar con el público a través de símbolos y elementos que representan la experiencia única que ofrece la bebida, dejando que la imagen hable por sí misma.",
+    "slogan": "Arte Único.",
+    "images": ["/projects/publicitario/branca/branca-01.webp", "/projects/publicitario/branca/branca-02.webp", "/projects/publicitario/branca/branca-03.webp"]
+  },
+  {
+    "id": "madre-de-la-patria",
+    "name": "Madre de la patria",
+    "category": "Editorial Design",
+    "description": "En este proyecto de diseño editorial, creé dos propuestas de portada para el libro Madre de la Patria de Mirta Fachini, una obra que honra la vida y el sacrificio de María Remedios del Valle. Mi objetivo fue transmitir la fuerza, el valor y la sensibilidad de esta mujer emblemática, utilizando un lenguaje visual que invita a la reflexión y al reconocimiento de su legado histórico y humano. Cada diseño busca emocionar y conectar con el lector desde lo más profundo.",
+    "slogan": "Portadas que honran historias de valor y coraje.",
+    "images": ["/projects/editorial/patria/patria-01.webp", "/projects/editorial/patria/patria-02.webp"]
+  },
+  {
+    "id": "madre-de-la-patria-2",
+    "name": "Madre de la patria 2",
+    "category": "Editorial Design",
+    "description": "En este proyecto de diseño editorial, creé dos propuestas de portada para el libro Madre de la Patria de Mirta Fachini, una obra que honra la vida y el sacrificio de María Remedios del Valle. Mi objetivo fue transmitir la fuerza, el valor y la sensibilidad de esta mujer emblemática, utilizando un lenguaje visual que invita a la reflexión y al reconocimiento de su legado histórico y humano. Cada diseño busca emocionar y conectar con el lector desde lo más profundo.",
+    "slogan": "Portadas que honran historias de valor y coraje.",
+    "images": ["/projects/editorial/patriav2/patriav2-01.webp", "/projects/editorial/patriav2/patriav2-02.webp"]
+  },
+  {
+    "id": "ciudad-y-los-ojos-3",
+    "name": "Ciudad y los ojos 3",
+    "category": "Editorial Design",
+    "description": "Diseñé esta portada con un enfoque abstracto para reflejar la dualidad entre la ciudad y la mirada humana, dos mundos que se entrelazan en el cuento. Utilicé líneas orgánicas para crear una composición que transmita misterio y profundidad, invitando al lector a explorar lo visible y lo oculto a través del diseño.",
+    "slogan": "Abriendo puertas a mundos invisibles.",
+    "images": ["/projects/editorial/ojos/ojos-01.webp", "/projects/editorial/ojos/ojos-02.webp"]
+  },
+  {
+    "id": "circuito-gastronomico",
+    "name": "Circuito gastronómico",
+    "category": "Editorial Design",
+    "description": "Diseñé una revista virtual que destaca los mejores restaurantes de Córdoba, elegidos en concursos donde cada mes, durante “La Semana de”, compiten con sus mejores platos. El foco del proyecto fue crear un diseño editorial original y creativo que reflejara la diversidad gastronómica de la ciudad, haciendo que la experiencia de lectura sea atractiva e innovadora.",
+    "slogan": "Diseño creativo para sabores únicos.",
+    "images": ["/projects/editorial/gastronomico/gastronomico-01.webp", "/projects/editorial/gastronomico/gastronomico-02.webp", "/projects/editorial/gastronomico/gastronomico-03.webp"]
+  },
+  {
+    "id": "triptico-1",
+    "name": "Tríptico 1",
+    "category": "Social Media Design",
+    "description": "Diseño editorial de un tríptico promocional para un establecimiento especializado en productos Apple. El objetivo fue destacar los productos de forma visualmente moderna, limpia y profesional, respetando la estética tecnológica de la marca. Se organizó la información de forma estratégica, combinando jerarquías claras, imágenes de alta calidad y una diagramación que guía al lector de manera intuitiva por la oferta del local, incluyendo ubicación, contacto y servicios destacados.",
+    "slogan": "Tecnología que inspira.",
+    "images": ["/projects/redes/iclub/iclub-01.webp", "/projects/redes/iclub/iclub-02.webp", "/projects/redes/iclub/iclub-03.webp", "/projects/redes/iclub/iclub-04.webp"]
+  },
+  {
+    "id": "triptico-2",
+    "name": "Tríptico 2",
+    "category": "Social Media Design",
+    "description": "Diseño editorial de un tríptico promocional para un establecimiento especializado en productos Apple. El objetivo fue destacar los productos de forma visualmente moderna, limpia y profesional, respetando la estética tecnológica de la marca. Se organizó la información de forma estratégica, combinando jerarquías claras, imágenes de alta calidad y una diagramación que guía al lector de manera intuitiva por la oferta del local, incluyendo ubicación, contacto y servicios destacados.",
+    "slogan": "Tecnología que inspira.",
+    "images": ["/projects/redes/iclubv2/iclubv2-01.webp", "/projects/redes/iclubv2/iclubv2-02.webp", "/projects/redes/iclubv2/iclubv2-03.webp", "/projects/redes/iclubv2/iclubv2-04.webp"]
+  },
+  {
+    "id": "triptico-3",
+    "name": "Tríptico 3",
+    "category": "Social Media Design",
+    "description": "Diseño editorial de un tríptico promocional para un establecimiento especializado en productos Apple. El objetivo fue destacar los productos de forma visualmente moderna, limpia y profesional, respetando la estética tecnológica de la marca. Se organizó la información de forma estratégica, combinando jerarquías claras, imágenes de alta calidad y una diagramación que guía al lector de manera intuitiva por la oferta del local, incluyendo ubicación, contacto y servicios destacados.",
+    "slogan": "Tecnología que inspira.",
+    "images": ["/projects/redes/iclubv3/iclubv3-01.webp", "/projects/redes/iclubv3/iclubv3-02.webp", "/projects/redes/iclubv3/iclubv3-03.webp"] 
+  },
+  {
+    "id": "vale",
+    "name": "Vale",
+    "category": "Social Media Design",
+    "description": "Diseño de flyers promocionales para una serie de presentaciones en vivo de un artista de folktales. La propuesta gráfica buscó capturar la esencia contemporánea del folclore, fusionando elementos tradicionales con una estética visual actual y llamativa, adaptada a cada espacio sin perder la identidad del artista.",
+    "slogan": "La verdadera peña.",
+    "images": ["/projects/redes/vale/vale-01.webp", "/projects/redes/vale/vale-02.webp"]
+  },
+  {
+    "id": "tipografias",
+    "name": "Tipografías",
+    "category": "Social Media Design",
+    "description": "Proyecto personal de diseño donde exploré libremente mi creatividad partiendo desde la base tipográfica. Cada pieza fue una oportunidad para experimentar con composiciones visuales únicas, donde la tipografía no solo comunica, sino que se convierte en protagonista del mensaje. Jugué con formas, estilos y jerarquías, utilizando mis tipografías favoritas —las geométricas, modernas y expresivas— para crear piezas visualmente impactantes. Este proyecto refleja mi enfoque experimental y mi pasión por el diseño que nace desde la letra.",
+    "slogan": "Cuando la tipografía habla, el diseño cobra vida.",
+    "images": ["/projects/redes/post/post-03.webp", "/projects/redes/post/post-02.webp", "/projects/redes/post/post-01.webp"]
+  },
+  {
+    "id": "odontomarca",
+    "name": "ODONTOMARCA",
+    "category": "Social Media Design",
+    "description": "Como diseñadora gráfica, desarrollé una serie de flyers digitales pensados para redes sociales, enfocados en transmitir de manera clara y visual la misión, visión y valores de la marca. La propuesta gráfica se apoyó en una paleta fresca y profesional, tipografías limpias y composiciones equilibradas que reflejan confianza, cercanía y compromiso con la salud bucal. Cada pieza fue creada estratégicamente para fortalecer la identidad visual de la marca y conectar emocionalmente con el público objetivo, manteniendo coherencia con su discurso institucional.",
+    "slogan": "Visuales que hablan de confianza y bienestar.",
+    "images": ["/projects/redes/odon/n1.webp", "/projects/redes/odon/n2.webp", "/projects/redes/odon/n3.webp", "/projects/redes/odon/n4.webp", "/projects/redes/odon/n5.webp", "/projects/redes/odon/n6.webp" ]
+  },
+  {
+    "id": "natutreats",
+    "name": "NatuTreats",
+    "category": "Social Media Design",
+    "description": "Diseñé una serie de flyers en formato carrusel para redes sociales, pensados para una panadería especializada en productos naturales para mascotas. El objetivo fue crear piezas gráficas que captaran la atención de inmediato, apelando a la ternura animal y a la conexión emocional con sus cuidadores. A través de colores cálidos, ilustraciones amigables y una composición dinámica, busqué transmitir la visión, misión y valores de la marca: el amor por los animales, el compromiso con su bienestar y la calidad artesanal en cada producto. Cada pieza fue pensada para ser visualmente atractiva, pero también clara, cercana y coherente con la identidad de marca.",
+    "slogan": "Delicias que despiertan colitas felices.",
+    "images": ["/projects/redes/natu/natu-01.webp", "/projects/redes/natu/natu-02.webp", "/projects/redes/natu/natu-03.webp", "/projects/redes/natu/natu-04.webp"]
+  }
+]
