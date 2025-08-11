@@ -11,9 +11,8 @@ import ilustratorLogo from "../assets/ilustrator.svg";
 import photoshopLogo from "../assets/photoshop.svg";
 import premiereLogo from "../assets/premiere.svg";
 
-type Props = {};
 
-const SkillsSection = (props: Props) => {
+const SkillsSection = () => {
   const Technologies = [
     {
       name: "Adobe Illustrator",
