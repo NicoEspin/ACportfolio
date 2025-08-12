@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Eye, ExternalLink, Filter } from "lucide-react";
 import projectsData from "@/app/data/projects.json";
 import { useRouter } from "next/navigation";
+import { Navbar } from "../components/Navbar";
 
 interface Project {
   id: string;
@@ -305,6 +306,7 @@ const ProjectsPage = () => {
 
   return (
     <section className="relative bg-[#1E1E1E] text-white overflow-hidden px-2 sm:px-4 py-8 min-h-screen">
+      <Navbar variant="glass" top={0}/>
       {/* Animated Blobs */}
       <motion.div
         className="absolute w-60 h-60 bg-purple-500 rounded-full blur-3xl opacity-30"

@@ -8,6 +8,7 @@ import projectsData from "@/app/data/projects.json";
 import ImageModal from "./components/ImageModal";
 import ImageCarousel from "./components/ImageCarousel";
 import ThumbnailGallery from "./components/ThumbnailGallery";
+import { Navbar } from "@/app/components/Navbar";
 
 interface Project {
   id: string;
@@ -79,6 +80,7 @@ export default function Page({ params }: { params: Promise<{ projectId: string }
 
   return (
     <section className="relative bg-[#1E1E1E] text-white overflow-hidden min-h-screen">
+      <Navbar variant="solid" top={0} />
       {/* Animated Blobs */}
       <motion.div
         className="absolute w-60 h-60 bg-purple-500 rounded-full blur-3xl opacity-30"

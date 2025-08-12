@@ -110,7 +110,7 @@ const SkillsSection = () => {
           <div className="flex justify-center lg:justify-end">
             <div
               className="h-[400px] lg:h-[600px] overflow-hidden grid md:grid-cols-2 gap-4
-              [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]"
+              [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] mb-10 sm:"
             >
               <TechColumn Technologies={Technologies} />
               <TechColumn
