@@ -9,7 +9,7 @@ import "./globals.css";
 export default function Home() {
   return (
     <>
-      <Navbar variant="glass" top={0} />
+      <Navbar variant="glass" top={50} />
       <Hero />
       <SkillsSection />
       <ProjectSection />

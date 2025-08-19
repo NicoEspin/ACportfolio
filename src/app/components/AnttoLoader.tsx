@@ -18,9 +18,10 @@ const AnttoLoader: React.FC<AnttoLoaderProps> = ({
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
+      // Reducimos el delay y llamamos onLoadingComplete inmediatamente cuando comienza la animación de salida
       setTimeout(() => {
         onLoadingComplete?.();
-      }, 800);
+      }, 0); // Reducido de 800ms a 100ms
     }, duration);
 
     return () => clearTimeout(timer);
@@ -34,7 +35,11 @@ const AnttoLoader: React.FC<AnttoLoaderProps> = ({
           style={{ backgroundColor: "#0C0824" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0, scale: 0.9 }}
+          exit={{ 
+            opacity: 0, 
+            scale: 0.95,
+            transition: { duration: 0.4 } // Reducido de 0.6s a 0.4s
+          }}
           transition={{ duration: 0.6 }}
         >
           {/* Animated Background Gradient */}

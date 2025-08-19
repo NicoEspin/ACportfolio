@@ -7,22 +7,38 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-[#1E1E1E] text-white relative overflow-hidden">
-      {/* Animated Blobs */}
+    <section className="min-h-screen text-white relative overflow-hidden">
+      {/* Aurora Dream Vivid Bloom Background */}
+       <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)",
+    }}
+  />
+  
+      {/* Bottom fade overlay */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          background: "linear-gradient(to top, #0C0824 0%, rgba(12, 8, 36, 0.8) 8%, transparent 20%)",
+        }}
+      />
+
+      {/* Animated Blobs - Reduced opacity to blend with aurora */}
       <motion.div
-        className="absolute w-60 h-60 bg-purple-500 rounded-full blur-3xl opacity-30"
+        className="absolute w-60 h-60 bg-purple-500 rounded-full blur-3xl opacity-20"
         style={{ top: "10%", left: "5%" }}
         animate={{ y: [0, -20, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute w-72 h-72 bg-pink-500 rounded-full blur-3xl opacity-20 hidden sm:block"
+        className="absolute w-72 h-72 bg-pink-500 rounded-full blur-3xl opacity-15 hidden sm:block"
         style={{ bottom: "15%", right: "10%" }}
         animate={{ y: [0, 25, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute w-40 h-40 bg-purple-300 rounded-full blur-2xl opacity-25 hidden md:block"
+        className="absolute w-40 h-40 bg-purple-300 rounded-full blur-2xl opacity-15 hidden md:block"
         style={{ top: "50%", left: "40%" }}
         animate={{ x: [0, 15, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
@@ -45,7 +61,7 @@ const Hero = () => {
               </h1>
             </div>
 
-            <p className="text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl">
+            <p className="text-gray-200 text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl">
               Conecto marcas con personas a través del diseño inteligente.
               Construyo identidades visuales que comunican valores, generan
               confianza y destacan en un entorno competitivo.
@@ -67,106 +83,106 @@ const Hero = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
               {/* Pure Backglow Effect - Contained to Image Area */}
-              <motion.div 
+              <motion.div
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[600px] z-[-1]"
-                animate={{ 
+                animate={{
                   scale: [1.0, 1.2, 1.0],
-                  opacity: [0.7, 0.9, 0.7]
+                  opacity: [0.7, 0.9, 0.7],
                 }}
-                transition={{ 
-                  duration: 8, 
-                  repeat: Infinity, 
-                  ease: "easeInOut" 
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
                 }}
               >
                 {/* Primary Dynamic Glow */}
                 <motion.div
                   className="absolute top-16 left-16 w-80 h-80 bg-gradient-to-br from-purple-500/60 via-pink-500/40 to-cyan-500/20 rounded-full blur-3xl"
-                  animate={{ 
+                  animate={{
                     x: [0, 20, -15, 0],
                     y: [0, -25, 10, 0],
-                    scale: [1, 1.2, 0.9, 1]
+                    scale: [1, 1.2, 0.9, 1],
                   }}
-                  transition={{ 
-                    duration: 12, 
-                    repeat: Infinity, 
-                    ease: "easeInOut" 
+                  transition={{
+                    duration: 12,
+                    repeat: Infinity,
+                    ease: "easeInOut",
                   }}
                 />
 
                 {/* Secondary Color Layer */}
                 <motion.div
                   className="absolute top-20 right-12 w-72 h-72 bg-gradient-to-tl from-pink-400/50 via-purple-500/35 to-indigo-400/25 rounded-full blur-2xl"
-                  animate={{ 
+                  animate={{
                     x: [0, -18, 12, 0],
                     y: [0, 15, -20, 0],
-                    scale: [0.8, 1.1, 0.9, 0.8]
+                    scale: [0.8, 1.1, 0.9, 0.8],
                   }}
-                  transition={{ 
-                    duration: 10, 
-                    repeat: Infinity, 
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
                     ease: "easeInOut",
-                    delay: 2
+                    delay: 2,
                   }}
                 />
 
                 {/* Accent Glow */}
                 <motion.div
                   className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-r from-violet-400/40 via-fuchsia-400/30 to-sky-400/20 rounded-full blur-2xl"
-                  animate={{ 
+                  animate={{
                     x: [0, 15, -10, 0],
                     y: [0, -12, 18, 0],
-                    scale: [1.1, 0.8, 1.2, 1.1]
+                    scale: [1.1, 0.8, 1.2, 1.1],
                   }}
-                  transition={{ 
-                    duration: 14, 
-                    repeat: Infinity, 
+                  transition={{
+                    duration: 14,
+                    repeat: Infinity,
                     ease: "easeInOut",
-                    delay: 4
+                    delay: 4,
                   }}
                 />
 
                 {/* Floating Accent Orbs */}
                 <motion.div
                   className="absolute top-8 right-16 w-20 h-20 bg-gradient-to-br from-pink-300/60 to-violet-400/40 rounded-full blur-xl"
-                  animate={{ 
+                  animate={{
                     x: [0, 25, -15, 0],
                     y: [0, -20, 30, 0],
-                    opacity: [0.4, 0.8, 0.4]
+                    opacity: [0.4, 0.8, 0.4],
                   }}
-                  transition={{ 
-                    duration: 16, 
-                    repeat: Infinity, 
-                    ease: "easeInOut" 
+                  transition={{
+                    duration: 16,
+                    repeat: Infinity,
+                    ease: "easeInOut",
                   }}
                 />
 
                 <motion.div
                   className="absolute bottom-12 left-8 w-24 h-24 bg-gradient-to-tr from-cyan-300/50 to-purple-400/35 rounded-full blur-xl"
-                  animate={{ 
+                  animate={{
                     x: [0, -20, 25, 0],
                     y: [0, 15, -25, 0],
-                    opacity: [0.3, 0.7, 0.3]
+                    opacity: [0.3, 0.7, 0.3],
                   }}
-                  transition={{ 
-                    duration: 18, 
-                    repeat: Infinity, 
+                  transition={{
+                    duration: 18,
+                    repeat: Infinity,
                     ease: "easeInOut",
-                    delay: 3
+                    delay: 3,
                   }}
                 />
 
                 {/* Subtle Edge Diffusion */}
                 <motion.div
                   className="absolute top-8 left-8 right-8 bottom-8 bg-gradient-radial from-transparent via-purple-500/5 to-pink-500/10 blur-lg rounded-full"
-                  animate={{ 
+                  animate={{
                     scale: [1, 1.1, 1],
-                    opacity: [0.3, 0.5, 0.3]
+                    opacity: [0.3, 0.5, 0.3],
                   }}
-                  transition={{ 
-                    duration: 20, 
-                    repeat: Infinity, 
-                    ease: "easeInOut" 
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "easeInOut",
                   }}
                 />
               </motion.div>
@@ -176,14 +192,14 @@ const Hero = () => {
                 className="relative z-10"
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ 
-                  duration: 1.2, 
+                transition={{
+                  duration: 1.2,
                   ease: [0.25, 0.46, 0.45, 0.94],
-                  delay: 0.2 
+                  delay: 0.2,
                 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.02,
-                  transition: { duration: 0.3, ease: "easeOut" }
+                  transition: { duration: 0.3, ease: "easeOut" },
                 }}
               >
                 <Image
@@ -200,7 +216,7 @@ const Hero = () => {
         </div>
 
         {/* Enhanced Scroll indicator */}
-        <motion.div 
+        <motion.div
           className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-20"
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

@@ -3,7 +3,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%);
 }
 
 @theme inline {
@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-      --background: #1E1E1E;
+      --background: radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%);
     --foreground: #ededed;
   }
 }
