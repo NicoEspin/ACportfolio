@@ -3,9 +3,8 @@ import ContactSection from '../components/ContactSection'
 import Footer from '../components/Footer'
 import { Navbar } from '../components/Navbar'
 
-type Props = {}
 
-const page = (props: Props) => {
+const page = () => {
   return (
     <>
     <Navbar variant="glass" top={20} />
