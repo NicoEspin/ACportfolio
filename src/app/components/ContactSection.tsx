@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
-import React from "react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { Instagram, MapPin, MessageCircle, Send } from "lucide-react";
+import React from "react";
 
 // Componentes simplificados y funcionales
 const BottomGradient = () => {
@@ -114,6 +114,11 @@ const LabelInputContainer = ({
 };
 
 export default function ContactSection() {
+  const whatsappMessage = encodeURIComponent(
+    "Hola Antto, te contacto porque me gustaron tus trabajos y me gustaría que creemos un proyecto juntos"
+  );
+  const whatsappNumber = "5493541217439"; // Formato internacional para Argentina
+
   return (
     <section className="relative bg-gradient-to-b from-[#16213e] via-[#1E1E1E] to-[#16213e] text-white overflow-hidden px-4 py-20 min-h-screen">
       {/* Gradient overlays suaves */}
@@ -171,41 +176,49 @@ export default function ContactSection() {
 
               {/* Contact Cards */}
               <div className="space-y-4">
-                {/* Email */}
-                <div
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/ac.graficos/?igsh=bTN4MXdnZDlsYzR6#"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-4 bg-gray-900/40 backdrop-blur-sm border border-white/10 
-                              hover:border-purple-400/30 transition-all duration-300 px-5 py-4 rounded-xl
-                              hover:bg-gray-900/60"
+                            hover:border-purple-400/30 transition-all duration-300 px-5 py-4 rounded-xl
+                            hover:bg-gray-900/60 cursor-pointer group"
                 >
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-xl">
-                    <Mail className="text-white w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400 font-medium">Email</p>
-                    <p className="font-semibold text-white text-sm">
-                      Antocatalanvcp@gmail.com
-                    </p>
-                  </div>
-                </div>
-
-                {/* Phone */}
-                <div
-                  className="flex items-center gap-4 bg-gray-900/40 backdrop-blur-sm border border-white/10 
-                              hover:border-purple-400/30 transition-all duration-300 px-5 py-4 rounded-xl
-                              hover:bg-gray-900/60"
-                >
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-xl">
-                    <Phone className="text-white w-5 h-5" />
+                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-xl group-hover:scale-105 transition-transform">
+                    <Instagram className="text-white w-5 h-5" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-400 font-medium">
-                      Teléfono
+                      Instagram
                     </p>
                     <p className="font-semibold text-white text-sm">
-                      +54 03541 - 217439
+                      @ac.graficos
                     </p>
                   </div>
-                </div>
+                </a>
+
+                {/* WhatsApp */}
+                <a
+                  href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 bg-gray-900/40 backdrop-blur-sm border border-white/10 
+                            hover:border-purple-400/30 transition-all duration-300 px-5 py-4 rounded-xl
+                            hover:bg-gray-900/60 cursor-pointer group"
+                >
+                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-xl group-hover:scale-105 transition-transform">
+                    <MessageCircle className="text-white w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-400 font-medium">
+                      WhatsApp
+                    </p>
+                    <p className="font-semibold text-white text-sm">
+                      +54 3541 217439
+                    </p>
+                  </div>
+                </a>
 
                 {/* Location */}
                 <div

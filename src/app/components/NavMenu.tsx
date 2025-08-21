@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -18,11 +19,9 @@ export type NavMenuProps = {
 };
 
 const DEFAULT_ITEMS: NavItem[] = [
-  { href: "#hero", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "/projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Inicio" },
+  { href: "/projects", label: "Portfolio" },
+  { href: "/contact", label: "Contacto" },
 ];
 
 export const NavMenu: React.FC<NavMenuProps> = ({
@@ -69,7 +68,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({
 
   return (
     <div 
-      className={`sticky top-0 right-0 z-50 md:hidden ${className}`}
+      className={`sticky top-0 z-50 md:hidden ${className}`}
       style={{ 
         top: `${top}px`,
         background: 'none',
@@ -116,7 +115,7 @@ export const NavMenu: React.FC<NavMenuProps> = ({
                 width: '100vw',
                 height: '100vh',
                 touchAction: 'none',
-                  background: "radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)"
+                background: "radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)"
               }}
               onClick={(e) => {
                 if (e.target === e.currentTarget) {
@@ -138,6 +137,34 @@ export const NavMenu: React.FC<NavMenuProps> = ({
                   className="flex flex-col items-center justify-center space-y-8 z-[65]"
                   onClick={(e) => e.stopPropagation()}
                 >
+                  {/* Logo dentro del menú */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    transition={{ 
+                      delay: 0.2,
+                      duration: 0.4,
+                      ease: "easeOut"
+                    }}
+                    className="relative z-[66] mb-4"
+                  >
+                    <Link
+                      href="/"
+                      onClick={() => handleNavClick("/")}
+                      className="flex items-center"
+                    >
+                      <Image
+                        src="/logo.webp"
+                        alt="Logo"
+                        width={48}
+                        height={48}
+                        className="h-20 w-auto"
+                        priority
+                      />
+                    </Link>
+                  </motion.div>
+
                   {items.map((item, index) => (
                     <motion.div
                       key={item.href}

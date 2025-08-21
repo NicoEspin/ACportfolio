@@ -3,7 +3,9 @@
 
 import React, { useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
+
 import { NavMenu } from "./NavMenu";
 
 type TabItem = { href: string; label: string };
@@ -17,11 +19,9 @@ export type NavbarProps = {
 };
 
 const DEFAULT_ITEMS: TabItem[] = [
-  { href: "#hero", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "/projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Inicio" },
+  { href: "/projects", label: "Portfolio" },
+  { href: "/contact", label: "Contacto" },
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -33,9 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <>
       {/* NavMenu para móvil */}
- 
-        <NavMenu items={items}  />
-  
+      <NavMenu items={items} />
 
       {/* Navbar original para desktop */}
       <div 
@@ -77,11 +75,26 @@ const SlideTabs: React.FC<{ items: TabItem[]; variant: string }> = ({
   return (
     <ul
       onMouseLeave={() => setPosition((pv) => ({ ...pv, opacity: 0 }))}
-      className={`relative flex w-fit rounded-full px-2 py-2 ${bgClass}`}
+      className={`relative flex w-fit max-w-md rounded-full px-2 py-2 items-center justify-between ${bgClass}`}
       style={transparentStyles}
       role="tablist"
-      aria-label="Sections"
+      aria-label="Navigation"
     >
+      {/* Logo */}
+      <li className="flex items-center px-2">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.webp"
+            alt="Logo"
+            width={32}
+            height={32}
+            className="h-10 w-auto"
+            priority
+          />
+        </Link>
+      </li>
+
+      {/* Navigation Links */}
       {items.map((item) => (
         <Tab key={item.href} href={item.href} setPosition={setPosition}>
           {item.label}
@@ -138,7 +151,7 @@ const Tab: React.FC<TabProps> = ({ href, children, setPosition }) => {
 const Cursor: React.FC<{ position: Position }> = ({ position }) => (
   <motion.li
     animate={{ ...position }}
-    className="absolute z-0 h-8 rounded-full bg-white/10 md:h-10"
+    className="absolute z-0 h-8 rounded-full bg-purple-500/20 md:h-10"
     aria-hidden="true"
   />
 );

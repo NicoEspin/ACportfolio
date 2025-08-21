@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Eye, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 interface Project {
   id: string;
@@ -74,12 +75,6 @@ const ProjectSection = () => {
 
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
-  // Función para navegar al detalle del proyecto
-  const handleProjectClick = (projectId: string) => {
-    // Implementar navegación (router.push o similar)
-    console.log(`Navigating to project: ${projectId}`);
-  };
-
   // Función para ver todos los proyectos
   const handleViewAllProjects = () => {
     // Implementar navegación a página de proyectos
@@ -146,140 +141,142 @@ const ProjectSection = () => {
         >
           {/* Primera fila */}
           {/* Vezla - Ocupa 5 columnas */}
-          <motion.div
-            className="md:col-span-5 group relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-600/20 to-yellow-800/40 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-500 cursor-pointer min-h-[280px] lg:min-h-[320px]"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            whileHover={{ scale: 1.02, y: -5 }}
-            onClick={() => handleProjectClick(featuredProjects[0].id)}
-          >
-            {/* Background Image */}
-            <div className="absolute inset-0">
-              <img
-                src={featuredProjects[0].images[0]}
-                alt={featuredProjects[0].name}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-            </div>
-
-            {/* Content */}
-            <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-end">
-              <div className="mb-3">
-                <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-md text-white text-sm font-medium">
-                  Branding
-                </span>
-              </div>
-              <div className="mb-2">
-                <p className="text-white/80 text-sm">Creación de identidad</p>
-              </div>
-              <h3 className="text-4xl lg:text-5xl font-bold text-white">
-                Vezla
-              </h3>
-            </div>
-          </motion.div>
-
-          {/* NatuTreats - Ocupa 3 columnas */}
-          <motion.div
-            className="md:col-span-3 group relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-400/30 to-orange-600/40 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-500 cursor-pointer min-h-[280px] lg:min-h-[320px]"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            whileHover={{ scale: 1.03, y: -3 }}
-            onClick={() => handleProjectClick(featuredProjects[1].id)}
-          >
-            <div className="absolute inset-0">
-              <img
-                src={featuredProjects[1].images[0]}
-                alt={featuredProjects[1].name}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-            </div>
-
-            <div className="absolute inset-0 p-4 lg:p-6 flex flex-col justify-between">
-              <div className="flex justify-end">
-              
+          <Link href={`/projects/${featuredProjects[0].id}`} className="md:col-span-5">
+            <motion.div
+              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-600/20 to-yellow-800/40 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-500 cursor-pointer min-h-[280px] lg:min-h-[320px] w-full h-full"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ scale: 1.02, y: -5 }}
+            >
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img
+                  src={featuredProjects[0].images[0]}
+                  alt={featuredProjects[0].name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
               </div>
 
-              <div>
-                <div className="mb-2">
+              {/* Content */}
+              <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-end">
+                <div className="mb-3">
                   <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-md text-white text-sm font-medium">
-                    Diseños
+                    Branding
                   </span>
                 </div>
                 <div className="mb-2">
-                  <p className="text-white/80 text-sm">Redes sociales</p>
+                  <p className="text-white/80 text-sm">Creación de identidad</p>
+                </div>
+                <h3 className="text-4xl lg:text-5xl font-bold text-white">
+                  Vezla
+                </h3>
+              </div>
+            </motion.div>
+          </Link>
+
+          {/* NatuTreats - Ocupa 3 columnas */}
+          <Link href={`/projects/${featuredProjects[1].id}`} className="md:col-span-3">
+            <motion.div
+              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-400/30 to-orange-600/40 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-500 cursor-pointer min-h-[280px] lg:min-h-[320px] w-full h-full"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ scale: 1.03, y: -3 }}
+            >
+              <div className="absolute inset-0">
+                <img
+                  src={featuredProjects[1].images[0]}
+                  alt={featuredProjects[1].name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+              </div>
+
+              <div className="absolute inset-0 p-4 lg:p-6 flex flex-col justify-between">
+                <div className="flex justify-end"></div>
+
+                <div>
+                  <div className="mb-2">
+                    <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-md text-white text-sm font-medium">
+                      Diseños
+                    </span>
+                  </div>
+                  <div className="mb-2">
+                    <p className="text-white/80 text-sm">Redes sociales</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </Link>
 
           {/* Segunda fila */}
           {/* Branca - Ocupa 4 columnas */}
-          <motion.div
-            className="md:col-span-4 group relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-800/30 to-cyan-900/40 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-500 cursor-pointer min-h-[280px] lg:min-h-[320px]"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            whileHover={{ scale: 1.03, y: -3 }}
-            onClick={() => handleProjectClick(featuredProjects[2].id)}
-          >
-            <div className="absolute inset-0">
-              <img
-                src={featuredProjects[2].images[0]}
-                alt={featuredProjects[2].name}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-            </div>
+          <Link href={`/projects/${featuredProjects[2].id}`} className="md:col-span-4">
+            <motion.div
+              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-800/30 to-cyan-900/40 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-500 cursor-pointer min-h-[280px] lg:min-h-[320px] w-full h-full"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              whileHover={{ scale: 1.03, y: -3 }}
+            >
+              <div className="absolute inset-0">
+                <img
+                  src={featuredProjects[2].images[0]}
+                  alt={featuredProjects[2].name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+              </div>
 
-            <div className="absolute inset-0 p-4 lg:p-6 flex flex-col justify-end">
-              <div className="mb-3">
-                <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-md text-white text-sm font-medium">
-                  Diseños Publicitarios
-                </span>
+              <div className="absolute inset-0 p-4 lg:p-6 flex flex-col justify-end">
+                <div className="mb-3">
+                  <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-md text-white text-sm font-medium">
+                    Diseños Publicitarios
+                  </span>
+                </div>
+                <div className="mb-2">
+                  <p className="text-white/80 text-sm">Anuncios</p>
+                </div>
               </div>
-              <div className="mb-2">
-                <p className="text-white/80 text-sm">Anuncios</p>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </Link>
 
           {/* Madre de la Patria - Ocupa 4 columnas */}
-          <motion.div
-            className="md:col-span-4 group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-600/30 to-slate-800/40 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-500 cursor-pointer min-h-[280px] lg:min-h-[320px]"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            whileHover={{ scale: 1.03, y: -3 }}
-            onClick={() => handleProjectClick(featuredProjects[3].id)}
-          >
-            <div className="absolute inset-0">
-              <img
-                src={featuredProjects[3].images[0]}
-                alt={featuredProjects[3].name}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-            </div>
+          <Link href={`/projects/${featuredProjects[3].id}`} className="md:col-span-4">
+            <motion.div
+              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-600/30 to-slate-800/40 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-500 cursor-pointer min-h-[280px] lg:min-h-[320px] w-full h-full"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              whileHover={{ scale: 1.03, y: -3 }}
+            >
+              <div className="absolute inset-0">
+                <img
+                  src={featuredProjects[3].images[0]}
+                  alt={featuredProjects[3].name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+              </div>
 
-            <div className="absolute inset-0 p-4 lg:p-6 flex flex-col justify-end">
-              <div className="mb-3">
-                <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-md text-white text-sm font-medium">
-                  Editorial
-                </span>
+              <div className="absolute inset-0 p-4 lg:p-6 flex flex-col justify-end">
+                <div className="mb-3">
+                  <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-md text-white text-sm font-medium">
+                    Editorial
+                  </span>
+                </div>
+                <div className="mb-2">
+                  <p className="text-white/80 text-sm">Revistas, Libros</p>
+                </div>
               </div>
-              <div className="mb-2">
-                <p className="text-white/80 text-sm">Revistas, Libros</p>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </Link>
         </motion.div>
 
         {/* Call to Action */}
@@ -292,19 +289,19 @@ const ProjectSection = () => {
         >
           <div className="inline-block p-6 lg:p-8 rounded-2xl bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-400/20 backdrop-blur-sm">
             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-              ¿Listo para crear algo increíble?
+              ¿Te gustaría explorar mis Proyectos?
             </h3>
             <p className="text-gray-300 mb-6 max-w-md mx-auto">
               Cada proyecto es una oportunidad única de crear algo
               extraordinario.
             </p>
-            <button
-              onClick={handleViewAllProjects}
+            <Link
+              href="/projects"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-xl text-white font-semibold transition-all duration-300 transform hover:scale-105"
             >
-              <span>Iniciar Nuevo Proyecto</span>
+              <span>Ver más</span>
               <ArrowUpRight className="w-5 h-5" />
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>

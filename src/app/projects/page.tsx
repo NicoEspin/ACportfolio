@@ -305,8 +305,9 @@ const ProjectsPage = () => {
   };
 
   return (
+    <>
+      <Navbar variant="glass" top={20}/>
     <section className="relative bg-[#1E1E1E] text-white overflow-hidden px-2 sm:px-4 py-8 min-h-screen">
-      <Navbar variant="glass" top={0}/>
       {/* Animated Blobs */}
       <motion.div
         className="absolute w-60 h-60 bg-purple-500 rounded-full blur-3xl opacity-30"
@@ -481,6 +482,7 @@ const ProjectsPage = () => {
         }
       `}</style>
     </section>
+    </>
   );
 };
 

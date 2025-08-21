@@ -31,6 +31,12 @@ const services = [
 ];
 
 const Services = () => {
+  // Constantes para WhatsApp (igual que en Footer)
+  const whatsappMessage = encodeURIComponent(
+    "Hola Antto, te contacto porque me gustaron tus trabajos y me gustaría que creemos un proyecto juntos"
+  );
+  const whatsappNumber = "5493541217439";
+
   return (
     <section className="relative bg-[#1E1E1E] text-white overflow-hidden px-4 py-20 z-10">
       {/* Blobs animados */}
@@ -98,9 +104,14 @@ const Services = () => {
               Siempre abierta a proyectos visuales que impliquen creatividad y
               estrategia de diseño.
             </p>
-            <button className="bg-white text-purple-600 px-6 py-2 rounded-full font-semibold hover:bg-purple-200 transition">
+            <a 
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-purple-600 px-6 py-2 rounded-full font-semibold hover:bg-purple-200 transition"
+            >
               Comenzar proyecto
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
